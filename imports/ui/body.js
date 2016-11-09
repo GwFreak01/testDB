@@ -16,6 +16,7 @@ import './register.html';
 Template.body.onCreated(function () {
     this.state = new ReactiveDict();
     Meteor.subscribe('allItems');
+    Meteor.subscribe('allStudents');
 });
 
 Template.body.helpers({
