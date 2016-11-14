@@ -2,6 +2,8 @@
  * Created by GWFreak01 on 11/6/16.
  */
 import {Mongo} from 'meteor/mongo';
+import './methods.js';
+
 
 const Students = new Mongo.Collection('students');
 
@@ -88,6 +90,9 @@ if (Meteor.isServer) {
             ]
         };
 
-        Students.insert(studentExample);
+        if (!Students.findOne()) {
+            Students.insert(studentExample);
+        }
+
     });
 }

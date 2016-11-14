@@ -2,8 +2,8 @@
  * Created by GWFreak01 on 11/6/16.
  */
 // import {FlowRouter} from 'meteor/kadira:flow-router';
-import '../../imports/ui/register.html';
-import '../../imports/ui/login.html';
+import '../../imports/ui/register.js';
+import '../../imports/ui/login.js';
 // import '../../imports/ui/app_body.html';
 
 FlowRouter.route('/', {
