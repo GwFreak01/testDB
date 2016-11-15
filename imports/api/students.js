@@ -92,6 +92,14 @@ if (Meteor.isServer) {
 
         if (!Students.findOne()) {
             Students.insert(studentExample);
+            Accounts.createUser({
+                username: studentExample.email,
+                password: studentExample.password
+            }, function (error) {
+                if (error) {
+                    console.log(error.message);
+                }
+            });
         }
 
     });

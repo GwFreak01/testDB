@@ -11,6 +11,7 @@ Template.login.onCreated(function () {
     this.state = new ReactiveDict();
     Meteor.subscribe('allItems');
     Meteor.subscribe('allStudents');
+
 });
 
 Template.login.events({
@@ -21,6 +22,12 @@ Template.login.events({
         var usernameVar = event.target.username.value;
         var passwordVar = event.target.password.value;
         console.log(usernameVar, passwordVar);
+
+        // Meteor.loginWithPassword("jwalk666@gmail.com", "none", function (error) {
+        //     if (error) {
+        //         console.log(error.reason);
+        //     }
+        // });
         Meteor.call('confirmLogin', usernameVar, passwordVar);
 
     },
