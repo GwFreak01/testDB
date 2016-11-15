@@ -27,3 +27,4 @@ session
 kadira:flow-router
 kadira:blaze-layout
 useraccounts:unstyled
+twbs:bootstrap

@@ -11,7 +11,7 @@ import './body.html';
 import './item.js';
 // import './login.js';
 
-import './register.html';
+// import './register.html';
 
 Template.body.onCreated(function () {
     this.state = new ReactiveDict();

@@ -67,7 +67,7 @@ Meteor.methods({
 
         if (Students.findOne({email: username})) {
             if (Students.findOne({email: username}).password == password) {
-                FlowRouter.go('/register');
+                FlowRouter.go('/home');
             } else {
                 alert('INCORRECT PASSWORD');
             }
