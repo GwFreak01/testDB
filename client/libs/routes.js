@@ -2,11 +2,11 @@
  * Created by GWFreak01 on 11/6/16.
  */
 // import {FlowRouter} from 'meteor/kadira:flow-router';
-// import '../../public/images/';
+// import '../../public/images';
 import '../../imports/ui/register.js';
 import '../../imports/ui/login.js';
 import '../../imports/ui/home.js';
-
+import '../../imports/ui/home.css';
 
 // import '../../imports/ui/app_body.html';
 

@@ -1,0 +1,66 @@
+/* CSS declarations go here */
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+
+/*body {*/
+    /*pading-top: 150px;*/
+/*}*/
+/*body {*/
+    /*background-color: yellow;*/
+/*}*/
+
+.glyphicon.glyphicon-home {
+    font-size: 50px;
+}
+
+.glyphicon.glyphicon-time {
+    font-size: 50px;
+}
+
+.glyphicon.glyphicon-file {
+    font-size: 50px;
+}
+
+.glyphicon.glyphicon-shopping-cart {
+     font-size: 50px;
+ }
+
+p {
+    /*border-color: black;*/
+    /*border-style: solid;*/
+    /*border-width: 3px;*/
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.homeIcon.li a {
+    display: block;
+    width: 60px;
+    margin: 20px;
+}
+
+.homeworkPanel.row {
+    border-style: solid;
+}
+
+.upcomingPanel.row {
+    border-style: solid;
+}
+
+.pointPanel.row {
+    border-style: solid;
+}
+@media screen and (min-width:768px) and (max-width:991px) {
+    body {
+        margin-top:100px;
+    }
+}
+@media screen and (min-width:992px) and (max-width:1199px) {
+    body {
+        margin-top:50px;
+    }
+}
