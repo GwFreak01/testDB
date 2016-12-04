@@ -2,30 +2,61 @@
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 
 /*body {*/
-    /*pading-top: 150px;*/
+/*pading-top: 150px;*/
 /*}*/
 /*body {*/
-    /*background-color: yellow;*/
+/*background-color: yellow;*/
 /*}*/
 
-
-.eaNavbar {
-    background-color: yellow;
-    border-style: solid;
+img {
+    /*display: block;*/
+    /*margin: auto;*/
+    /*width: 40%;*/
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
+.eaNavbar {
+    /*background-color: yellow;*/
+    border-bottom-style: solid;
+    /*padding: 0px;*/
+}
+
+.navBarItem {
+    border-left-style: solid;
+}
 .sidebar {
-    border-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
     /*padding: 10px;*/
     /*align-items: center;*/
 }
 
+.eaLogoSideBar {
+    text-align: center;
+    border-bottom-style: solid;
+}
+
+.homeSideBar {
+    text-align: center;
+    border-bottom-style: solid;
+}
+
+.sideBarItem {
+    text-align: center;
+    border-bottom-style: solid;
+    padding-bottom: 15px;
+}
+
+/*li {*/
+    /*text-align: center;*/
+    /*border-bottom-style: solid;*/
+/*}*/
+
 .homeworkTableHeader {
     font-size: 15px;
 }
-
-
-
 
 .glyphicon.glyphicon-alert {
     font-size: 18px;
@@ -33,19 +64,27 @@
 
 .glyphicon.glyphicon-home {
     font-size: 50px;
+    padding-top: 15px;
+    padding-bottom: 5px;
 }
 
 .glyphicon.glyphicon-time {
     font-size: 50px;
+    padding-top: 15px;
+    padding-bottom: 5px;
 }
 
 .glyphicon.glyphicon-file {
     font-size: 50px;
+    padding-top: 15px;
+    padding-bottom: 5px;
 }
 
 .glyphicon.glyphicon-shopping-cart {
-     font-size: 50px;
- }
+    font-size: 50px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
 
 p {
     /*border-color: black;*/
@@ -55,15 +94,10 @@ p {
 }
 
 ul {
+    /*border-style: solid;*/
     list-style-type: none;
     margin: 0;
     padding: 0;
-}
-
-.homeIcon.li a {
-    display: block;
-    width: 60px;
-    margin: 20px;
 }
 
 .homeworkPanel.row {
@@ -81,13 +115,14 @@ ul {
 table, th, td {
     border: 1px solid black;
 }
+
 /*@media screen and (min-width:768px) and (max-width:991px) {*/
-    /*body {*/
-        /*margin-top:100px;*/
-    /*} */
+/*body {*/
+/*margin-top:100px;*/
+/*} */
 /*}*/
 /*@media screen and (min-width:992px) and (max-width:1199px) {*/
-    /*body {*/
-        /*margin-top:50px;*/
-    /*}*/
+/*body {*/
+/*margin-top:50px;*/
+/*}*/
 /*}*/
