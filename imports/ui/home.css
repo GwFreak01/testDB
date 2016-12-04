@@ -8,6 +8,18 @@
     /*background-color: yellow;*/
 /*}*/
 
+
+.eaNavbar {
+    background-color: yellow;
+    border-style: solid;
+}
+
+.sidebar {
+    border-style: solid;
+    /*padding: 10px;*/
+    /*align-items: center;*/
+}
+
 .homeworkTableHeader {
     font-size: 15px;
 }
@@ -69,13 +81,13 @@ ul {
 table, th, td {
     border: 1px solid black;
 }
-@media screen and (min-width:768px) and (max-width:991px) {
-    body {
-        margin-top:100px;
-    }
-}
-@media screen and (min-width:992px) and (max-width:1199px) {
-    body {
-        margin-top:50px;
-    }
-}
+/*@media screen and (min-width:768px) and (max-width:991px) {*/
+    /*body {*/
+        /*margin-top:100px;*/
+    /*} */
+/*}*/
+/*@media screen and (min-width:992px) and (max-width:1199px) {*/
+    /*body {*/
+        /*margin-top:50px;*/
+    /*}*/
+/*}*/

@@ -20,6 +20,8 @@ Template.register.events({
         }, function (error) {
             if (error) {
                 console.log(error.message);
+            } else {
+                console.log(error);
             }
         });
         // Meteor.call('registerButton', event.target.username.value, event.target.password.value);

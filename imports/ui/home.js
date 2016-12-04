@@ -3,6 +3,6 @@
  */
 import {Template} from 'meteor/templating';
 
-// import '../../public/images/EA_Logo.png';
+// import '../../public/images/';
 import './home.html';
 import './home.css';

@@ -2,6 +2,8 @@
  * Created by GWFreak01 on 11/6/16.
  */
 import {Mongo} from 'meteor/mongo';
+// import {Meteor} from 'meteor/meteor';
+// import {SimpleSchema} from 'meteor/aldeed:simple-schema';
 import './methods.js';
 
 
@@ -56,6 +58,56 @@ Students.deny({
         }
     }
 });
+
+Students.schema = new SimpleSchema({
+    // _id: { //Unique student/user identifier within the system (Persistance of account between schools)
+    //     type: String,
+    //     regEx: SimpleSchema.RegEx.Id,
+    //     denyUpdate: true,
+    // },
+    // studentId: { //Unique student identifier relative to the school
+    //     type: String,
+    //     // regEx: SimpleSchema.RegEx.Id,
+    //     label: "School defined student ID",
+    //     denyUpdate: false,
+    // },
+    // schoolId: { //Unique school identifier the student associated with
+    //     type: String,
+    //     // regEx: SimpleSchema.RegEx.Id,
+    //     denyUpdate: false,
+    // },
+    firstName: {
+        type: String,
+        label: "First name",
+        max: 25,
+    },
+    lastName: {
+        type: String,
+        label: "Last name",
+        max: 35,
+    },
+    password: {
+        type: String,
+        max: 30,
+        //Encryption / Hashing ??
+    },
+    email: {
+        type: String,
+        regEx: SimpleSchema.RegEx.Email,
+        max: 50,
+    },
+    points: {
+        type: Number,
+        label: "Current number of acquired points",
+        defaultValue: 0,
+    },
+    // courseSchedule: {       //Courses a student is currently enrolled in; cleared when course complete
+    //     type: [Courses]
+    // }
+    // courseSchedule: {type: [],}
+});
+
+// Students.attachSchema(Students.schema);
 
 if (Meteor.isServer) {
     Meteor.publish('allStudents', function () {
