@@ -4,7 +4,7 @@
 import {Template} from 'meteor/templating';
 
 import './login.html';
-import '../../client/libs/routes.js';
+// import '../../client/libs/routes.js';
 
 Template.login.onCreated(function () {
     console.log("login Template Loaded");

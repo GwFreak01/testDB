@@ -7,6 +7,14 @@ import {Template} from 'meteor/templating';
 import './home.html';
 import './home.css';
 
+Template.home.onCreated(function () {
+    console.log("login Template Loaded");
+    this.state = new ReactiveDict();
+    Meteor.subscribe('allItems');
+    Meteor.subscribe('allStudents');
+
+});
+
 Template.home.helpers({
     dateVar: function () {
         var weekDay = ["Sun.", "Mon.", "Tue.", "Wed.", "Thu.", "Fri.", "Sat."];
@@ -21,7 +29,7 @@ Template.home.helpers({
     },
 
     studentName: function () {
-
+        
     }
 
 });

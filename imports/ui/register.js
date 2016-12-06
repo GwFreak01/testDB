@@ -3,7 +3,7 @@
  */
 import {Template} from 'meteor/templating';
 
-
+import './register.css';
 import './register.html';
 
 Template.register.helpers({
