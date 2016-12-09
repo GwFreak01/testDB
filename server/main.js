@@ -1,9 +1,13 @@
 import { Meteor } from 'meteor/meteor';
 import '../imports/api/items.js';
+import { Accounts } from 'meteor/accounts-base';
+
 
 // import '../imports/api/students.js';
 
 Meteor.startup(() => {
+    console.log("SERVER STARTUP");
+
   // code to run on server at startup
   //   let studentExample = {
   //       // _id: "3d3ad3ad-5bce-a672-fddf-bd57ba0190bd",

@@ -2,7 +2,9 @@
  * Created by GWFreak01 on 11/6/16.
  */
 import {Mongo} from 'meteor/mongo';
-// import {Meteor} from 'meteor/meteor';
+import { Accounts } from 'meteor/accounts-base';
+
+import {Meteor} from 'meteor/meteor';
 // import {SimpleSchema} from 'meteor/aldeed:simple-schema';
 import './methods.js';
 
@@ -110,6 +112,16 @@ Students.schema = new SimpleSchema({
 // Students.attachSchema(Students.schema);
 
 if (Meteor.isServer) {
+    var myMsg = "Incorrect Login";
+    Accounts.validateLoginAttempt(function(attempt){
+        if (attempt.error){
+            var reason = attempt.error.reason;
+            if (reason === "User not found" || reason === "Incorrect password")
+                throw new Meteor.Error(403, myMsg);
+        }
+        return attempt.allowed;
+    });
+
     Meteor.publish('allStudents', function () {
         return Students.find({});
     });

@@ -49,31 +49,31 @@ Meteor.methods({
         check(username, String);
         check(password, String);
 
-        // Meteor.loginWithPassword("jwalk666@gmail.com", "none", function (error) {
-        //     if (error) {
-        //         alert(error.reason);
-        //     }
-        // });
+        Meteor.loginWithPassword(username, password, function (error) {
+            if (error) {
+                alert(error.reason);
+            }
+        });
         // console.log(Students.findOne({email: username}).fetch());
 
 
-        // console.log(Meteor.users.find({}).fetch());
-
+        console.log(Meteor.users.find({}).fetch());
+        FlowRouter.go('/home');
         // console.log(Students.findOne({email: username}).password);
 
 
         // console.log(Students.findOne({email: username}));
         // console.log(Students.findOne({email: username}).password);
 
-        if (Students.findOne({email: username})) {
-            if (Students.findOne({email: username}).password == password) {
-                FlowRouter.go('/home');
-            } else {
-                alert('INCORRECT PASSWORD');
-            }
-        } else {
-            alert('No USERNAME');
-        }
+        // if (Students.findOne({email: username})) {
+        //     if (Students.findOne({email: username}).password == password) {
+        //         FlowRouter.go('/home');
+        //     } else {
+        //         alert('INCORRECT PASSWORD');
+        //     }
+        // } else {
+        //     alert('No USERNAME');
+        // }
 
 
 
@@ -88,11 +88,26 @@ Meteor.methods({
         // console.log("Initializing Account Creation");
         // console.log(event.target.username.value);
         // console.log(event.target.password.value);
+
+        // Accounts.createUser({
+        //     username: username,
+        //     password: password
+        // }, function (error) {
+        //     if (error)  {
+        //         console.log(error.message);
+        //     }
+        //     else {
+        //         Router.go('/home');
+        //     }
+        // });
+
         Accounts.createUser({
             username: username,
             password: password
         });
-        console.log(Meteor.users.findOne({}));
+        // console.log(Meteor.users.findOne({}));
+        console.log(Meteor.users.find().fetch());
+        FlowRouter.go('/home');
 
         // event.target.username.value = '';
         // event.target.password = '';

@@ -1,6 +1,7 @@
 /**
  * Created by GWFreak01 on 11/14/16.
  */
+import {Meteor} from 'meteor/meteor';
 import {Template} from 'meteor/templating';
 
 // import '../../public/images/EagerLogo.png';
