@@ -7,6 +7,7 @@ import { Accounts } from 'meteor/accounts-base';
 
 
 import './login.html';
+import './login.css';
 // import '../../client/libs/routes.js';
 
 Template.login.onCreated(function () {
@@ -24,9 +25,9 @@ Template.login.events({
         // console.log("loginForm Submit");
         var usernameVar = event.target.username.value;
         var passwordVar = event.target.password.value;
-        // console.log(usernameVar, passwordVar);
+        console.log(usernameVar, passwordVar);
 
-        Meteor.loginWithPassword(usernameVar, passwordVar, function (error) {
+        Meteor.loginWithPassword('gwfreak02@gmail.com', 'gwfreak01', function (error) {
             if (error) {
                 console.log(error.reason);
                 console.log(error.message);
@@ -63,6 +64,22 @@ Template.login.events({
     }
 });
 if (Meteor.isServer) {
+    console.log("Validating Login");
+    AccountsTemplates.configure({
+       confirmPassword: true
+    });
+
+    Accounts.validateLoginAttempt(function (error) {
+        console.log("Validating Login");
+        if (error) {
+
+            throw new Meteor.Error(403, error.message);
+        }
+        else {
+            return true;
+        }
+    });
+
     // var myMsg = "Incorrect Login1";
     // Accounts.validateLoginAttempt(function(attempt){
     //     if (attempt.error){
