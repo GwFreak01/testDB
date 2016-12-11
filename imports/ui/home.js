@@ -34,3 +34,12 @@ Template.home.helpers({
     }
 
 });
+
+Template.home.events({
+   'click .active'(event) {
+       $("#menu-toggle").click(function(e) {
+           e.preventDefault();
+           $("#wrapper").toggleClass("active");
+       });
+   }
+});

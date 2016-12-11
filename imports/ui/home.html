@@ -6,152 +6,194 @@
     </head>
 
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-2 sidebar">
-                <div class="row sideBarItem">
-                    <a href="/home">
-                        <div class="row">
-                            <img alt="Brand" src="/images/EagerHat.png" width="125">
-                        </div>
-                        <div class="row">
-                            <!--<img alt="Brand2" src="/images/EagerText.png" width="100">-->
-                            Eager Academy
-                        </div>
-                    </a>
-                </div>
-
-                <div class="row sideBarItem">
-                    <a href="/thankyou">
-                        <div class="row">
-                            <span class="glyphicon glyphicon-home"></span>
-                        </div>
-                        <div class="row">
-                            Home
-                        </div>
-                    </a>
-                </div>
-
-                <div class="row sideBarItem">
-                    <a href="/thankyou">
-                        <div class="row">
-                            <span class="glyphicon glyphicon-time"></span>
-                        </div>
-                        <div class="row">
-                            Classes
-                        </div>
-                    </a>
-                </div>
-
-                <div class="row sideBarItem">
-                    <a href="/thankyou">
-                        <div class="row">
-                            <span class="glyphicon glyphicon-file"></span>
-                        </div>
-                        <div class="row">
-                            Assignments
-                        </div>
-                    </a>
-                </div>
-
-                <div class="row sideBarItem">
-                    <a href="/thankyou">
-                        <div class="row">
-                            <span class="glyphicon glyphicon-shopping-cart"></span>
-                        </div>
-                        <div class="row">
-                            Store
-                        </div>
-                    </a>
-                </div>
-
-                <!--<ul>-->
-                <!--<li class="eagerIcon">-->
-                <!--<a href="/home">-->
-                <!--<img alt="Brand" src="/images/EagerHat.png" width="50" height="59">-->
-
-
-                <!--</a>-->
-                <!--</li>-->
-
-                <!--<li class="homeIcon">-->
-                <!--<a href="/thankyou">-->
-                <!--<span class="glyphicon glyphicon-home"></span>-->
-                <!--</a>-->
-                <!--</li>-->
-
-                <!--<li class="homeIcon">-->
-                <!--<a href="/thankyou">-->
-                <!--<span class="glyphicon glyphicon-time"></span>-->
-                <!--</a>-->
-                <!--</li>-->
-
-                <!--<li class="homeIcon">-->
-                <!--<a href="/thankyou">-->
-                <!--<span class="glyphicon glyphicon-file"></span>-->
-                <!--</a>-->
-                <!--</li>-->
-
-                <!--<li class="homeIcon">-->
-                <!--<a href="/thankyou">-->
-                <!--<span class="glyphicon glyphicon-shopping-cart"></span>-->
-                <!--</a>-->
-                <!--</li>-->
-                <!--</ul>-->
-            </div>
-            <div class="col-sm-10 eaNavbar">
-
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="navbar-text">
-                            <span class="glyphicon glyphicon-bell"></span>
-                        </li>
-
-                        <li class="dropdown navBarItem">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                John{{studentName}}
-                                <b class="caret">
-
-                                </b>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="main-nav-link">
-                                    <a href="teacher-edit-info.html">
-                                        <span class="glyphicon glyphicon-wrench"></span>
-                                        <span class="navbar-right">
-                                            Settings
-                                        </span>
-                                    </a>
-                                </li>
-
-                                <li class="main-nav-link">
-                                    <a href="teacher-edit-info.html">
-                                        <span class="glyphicon glyphicon-log-out"></span>
-                                        <span class="navbar-right">
-                                            Logout
-                                        </span>
-                                    </a>
-                                </li>
+        <div class="wrapper">
+            <div class="row row-offcanvas row-offcanvas-left">
+                <!-- sidebar -->
+                <div class="column col-sm-3 col-xs-1 sidebar-offcanvas" id="sidebar">
+                    <ul class="nav" id="menu">
+                        <li><a href="#"><i class="fa fa-list-alt"></i> <span class="collapse in hidden-xs">Link 1</span></a></li>
+                        <li><a href="#"><i class="fa fa-list"></i> <span class="collapse in hidden-xs">Stories</span></a></li>
+                        <li><a href="#"><i class="fa fa-paperclip"></i> <span class="collapse in hidden-xs">Saved</span></a></li>
+                        <li><a href="#"><i class="fa fa-refresh"></i> <span class="collapse in hidden-xs">Refresh</span></a></li>
+                        <li>
+                            <a href="#" data-target="#item1" data-toggle="collapse"><i class="fa fa-list"></i> <span class="collapse in hidden-xs">Menu <span class="caret"></span></span></a>
+                            <ul class="nav nav-stacked collapse left-submenu" id="item1">
+                                <li><a href="google.com">View One</a></li>
+                                <li><a href="gmail.com">View Two</a></li>
                             </ul>
                         </li>
-
-                        <li class="navBarItem">
-                            <div class="navbar-text">{{dateVar}}</div>
+                        <li>
+                            <a href="#" data-target="#item2" data-toggle="collapse"><i class="fa fa-list"></i> <span class="collapse in hidden-xs">Menu <span class="caret"></span></span></a>
+                            <ul class="nav nav-stacked collapse" id="item2">
+                                <li><a href="#">View One</a></li>
+                                <li><a href="#">View Two</a></li>
+                                <li><a href="#">View Three</a></li>
+                            </ul>
                         </li>
+                        <li><a href="#"><i class="glyphicon glyphicon-list-alt"></i> <span class="collapse in hidden-xs">Link</span></a></li>
                     </ul>
-
                 </div>
+                <!-- /sidebar -->
 
-
+                <!-- main right col -->
+                <div class="column col-sm-9 col-xs-11" id="main">
+                    <p><a href="#" data-toggle="offcanvas"><i class="fa fa-navicon fa-2x"></i></a></p>
+                    <p>
+                        Main content...
+                    </p>
+                </div>
+                <!-- /main -->
             </div>
         </div>
+
+
+        <!--<div class="row">-->
+        <!--<div class="col-sm-2 sidebar">-->
+        <!--<div class="row sideBarItem">-->
+        <!--<a href="/home">-->
+        <!--<div class="row">-->
+        <!--<img alt="Brand" src="/images/EagerHat.png" width="125">-->
+        <!--</div>-->
+        <!--<div class="row">-->
+        <!--&lt;!&ndash;<img alt="Brand2" src="/images/EagerText.png" width="100">&ndash;&gt;-->
+        <!--Eager Academy-->
+        <!--</div>-->
+        <!--</a>-->
+        <!--</div>-->
+
+        <!--<div class="row sideBarItem">-->
+        <!--<a href="/thankyou">-->
+        <!--<div class="row">-->
+        <!--<span class="glyphicon glyphicon-home"></span>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+        <!--Home-->
+        <!--</div>-->
+        <!--</a>-->
+        <!--</div>-->
+
+        <!--<div class="row sideBarItem">-->
+        <!--<a href="/thankyou">-->
+        <!--<div class="row">-->
+        <!--<span class="glyphicon glyphicon-time"></span>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+        <!--Classes-->
+        <!--</div>-->
+        <!--</a>-->
+        <!--</div>-->
+
+        <!--<div class="row sideBarItem">-->
+        <!--<a href="/thankyou">-->
+        <!--<div class="row">-->
+        <!--<span class="glyphicon glyphicon-file"></span>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+        <!--Assignments-->
+        <!--</div>-->
+        <!--</a>-->
+        <!--</div>-->
+
+        <!--<div class="row sideBarItem">-->
+        <!--<a href="/thankyou">-->
+        <!--<div class="row">-->
+        <!--<span class="glyphicon glyphicon-shopping-cart"></span>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+        <!--Store-->
+        <!--</div>-->
+        <!--</a>-->
+        <!--</div>-->
+
+        <!--&lt;!&ndash;<ul>&ndash;&gt;-->
+        <!--&lt;!&ndash;<li class="eagerIcon">&ndash;&gt;-->
+        <!--&lt;!&ndash;<a href="/home">&ndash;&gt;-->
+        <!--&lt;!&ndash;<img alt="Brand" src="/images/EagerHat.png" width="50" height="59">&ndash;&gt;-->
+
+
+        <!--&lt;!&ndash;</a>&ndash;&gt;-->
+        <!--&lt;!&ndash;</li>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<li class="homeIcon">&ndash;&gt;-->
+        <!--&lt;!&ndash;<a href="/thankyou">&ndash;&gt;-->
+        <!--&lt;!&ndash;<span class="glyphicon glyphicon-home"></span>&ndash;&gt;-->
+        <!--&lt;!&ndash;</a>&ndash;&gt;-->
+        <!--&lt;!&ndash;</li>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<li class="homeIcon">&ndash;&gt;-->
+        <!--&lt;!&ndash;<a href="/thankyou">&ndash;&gt;-->
+        <!--&lt;!&ndash;<span class="glyphicon glyphicon-time"></span>&ndash;&gt;-->
+        <!--&lt;!&ndash;</a>&ndash;&gt;-->
+        <!--&lt;!&ndash;</li>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<li class="homeIcon">&ndash;&gt;-->
+        <!--&lt;!&ndash;<a href="/thankyou">&ndash;&gt;-->
+        <!--&lt;!&ndash;<span class="glyphicon glyphicon-file"></span>&ndash;&gt;-->
+        <!--&lt;!&ndash;</a>&ndash;&gt;-->
+        <!--&lt;!&ndash;</li>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<li class="homeIcon">&ndash;&gt;-->
+        <!--&lt;!&ndash;<a href="/thankyou">&ndash;&gt;-->
+        <!--&lt;!&ndash;<span class="glyphicon glyphicon-shopping-cart"></span>&ndash;&gt;-->
+        <!--&lt;!&ndash;</a>&ndash;&gt;-->
+        <!--&lt;!&ndash;</li>&ndash;&gt;-->
+        <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+        <!--</div>-->
+        <!--<div class="col-sm-10 eaNavbar">-->
+
+        <!--<div class="navbar-header">-->
+        <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">-->
+        <!--<span class="icon-bar"></span>-->
+        <!--<span class="icon-bar"></span>-->
+        <!--<span class="icon-bar"></span>-->
+        <!--</button>-->
+        <!--</div>-->
+
+        <!--<div class="navbar-collapse collapse">-->
+        <!--<ul class="nav navbar-nav navbar-right">-->
+        <!--<li class="navbar-text">-->
+        <!--<span class="glyphicon glyphicon-bell"></span>-->
+        <!--</li>-->
+
+        <!--<li class="dropdown navBarItem">-->
+        <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+        <!--John{{studentName}}-->
+        <!--<b class="caret">-->
+
+        <!--</b>-->
+        <!--</a>-->
+        <!--<ul class="dropdown-menu">-->
+        <!--<li class="main-nav-link">-->
+        <!--<a href="teacher-edit-info.html">-->
+        <!--<span class="glyphicon glyphicon-wrench"></span>-->
+        <!--<span class="navbar-right">-->
+        <!--Settings-->
+        <!--</span>-->
+        <!--</a>-->
+        <!--</li>-->
+
+        <!--<li class="main-nav-link">-->
+        <!--<a href="teacher-edit-info.html">-->
+        <!--<span class="glyphicon glyphicon-log-out"></span>-->
+        <!--<span class="navbar-right">-->
+        <!--Logout-->
+        <!--</span>-->
+        <!--</a>-->
+        <!--</li>-->
+        <!--</ul>-->
+        <!--</li>-->
+
+        <!--<li class="navBarItem">-->
+        <!--<div class="navbar-text">{{dateVar}}</div>-->
+        <!--</li>-->
+        <!--</ul>-->
+
+        <!--</div>-->
+
+
+        <!--</div>-->
+        <!--</div>-->
+
 
         <div class="row">
             <!--<div class="col-sm-1 ">-->
@@ -279,7 +321,6 @@
 
 
     </div>
-
 
 
 </template>

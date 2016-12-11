@@ -6,8 +6,7 @@
 import '../../imports/ui/register.js';
 import '../../imports/ui/login.js';
 import '../../imports/ui/home.js';
-import '../../imports/ui/home.css';
-
+import '../../imports/ui/table.js'
 // import '../../imports/ui/app_body.html';
 
 FlowRouter.route('/', {
@@ -28,5 +27,12 @@ FlowRouter.route('/home', {
     name: 'home',
     action() {
         BlazeLayout.render('home');
+    }
+});
+
+FlowRouter.route('/table', {
+    name: 'table',
+    action() {
+        BlazeLayout.render('table');
     }
 });
